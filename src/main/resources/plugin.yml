@@ -1,0 +1,5 @@
+name: JumpPad
+version: ${project.version}
+main: hu.enderboyhun.pl.jumppad.Main
+authors: [EnderBoyHUN]
+description: A Minecraft plugin
