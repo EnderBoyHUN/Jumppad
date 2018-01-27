@@ -51,9 +51,10 @@ public class JumpPad implements ConfigurationSerializable {
         jp.forceV += v;
         jp.forceH += h;
         if (jp.forceV > 5) jp.forceV = 5;
-        if (jp.forceV < 1) jp.forceV = 1;
+        if (jp.forceV < 1 && v < 0) jp.forceV = 0;
+        if (jp.forceV < 1 && v > 0) jp.forceV = 1;
         if (jp.forceH > 5) jp.forceH = 5;
-        if (jp.forceH < 1) jp.forceH = 1;
+        if (jp.forceH < -5) jp.forceH = -5;
         savePads();
     }
 

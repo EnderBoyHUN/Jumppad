@@ -30,7 +30,8 @@ public class Use implements Listener {
         if (p.getGameMode() == SPECTATOR || p.isFlying() || p.isSneaking()) return;
 
         p.setVelocity(p.getLocation().getDirection().multiply(jp.getForceH()));
-        p.setVelocity(p.getVelocity().setY(jp.getForceV()));
+        if(jp.getForceV() >= 1)
+            p.setVelocity(p.getVelocity().setY(jp.getForceV()));
         p.playSound(p.getLocation(), ENTITY_FIREWORK_LAUNCH, 1.5f, 1);
         p.setFallDistance(-999);
     }
